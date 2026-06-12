@@ -5,52 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUXORA — Fashion Redefined</title>
-  <link rel="stylesheet" href="style.css" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+  rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">Free shipping on orders above ₹999 &nbsp;|&nbsp; Use code <strong>LUXORA10</strong> for 10% off
-  </div>
- 
-  <!-- NAVBAR -->
-  <header class="luxury-navbar">
-
-    <div class="nav-icons left-icons">
-      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-    </div>
-
-    <ul class="nav-menu">
-      <li><a href="#">New</a></li>
-      <li><a href="#">Bras</a></li>
-      <li><a href="#">Panties</a></li>
-    </ul>
-
-    <a href="#" class="logo">LUXORA</a>
-
-    <ul class="nav-menu">
-      <li><a href="#">Nightwear</a></li>
-      <li><a href="#">Sale</a></li>
-      <li><a href="#">Accessories</a></li>
-    </ul>
-
-    <div class="nav-icons right-icons">
-      <a href="#"><i class="fa-regular fa-user"></i></a>
-      <a href="#"><i class="fa-regular fa-heart"></i></a>
-
-      <a href="#" class="cart">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span>2</span>
-      </a>
-    </div>
-
-  </header>
-
+  <?php include("include/header.php"); ?>
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -142,7 +108,7 @@
 
       <div class="product-card">
         <div class="product-img-wrap">
-          <img src="debby-ledet-2ZXVU3BJzN4-unsplash.jpg" alt="Dress" />
+          <img src="image/index/debby-ledet-2ZXVU3BJzN4-unsplash.jpg" alt="Dress" />
           <span class="badge">New</span>
           <div class="product-actions">
             <button><i class="fas fa-heart"></i></button>
@@ -358,7 +324,7 @@
       </div>
 
       <div class="look-item look-wide">
-        <img src="tamara-bellis-68csPWTnafo-unsplash.jpg" alt="Look 4" />
+        <img src="image/index/tamara-bellis-68csPWTnafo-unsplash.jpg" alt="Look 4" />
         <div class="look-label">
           <span>Casual Chic</span>
           <a href="#">Shop Now →</a>
@@ -386,54 +352,8 @@
     </form>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>LUXORA</h3>
-        <p>Fashion Redefined. Wear what makes you feel unstoppable.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <h4>Shop</h4>
-        <a href="#">New Arrivals</a>
-        <a href="#">Women</a>
-        <a href="#">Men</a>
-        <a href="#">Accessories</a>
-        <a href="#">Sale</a>
-      </div>
-      <div class="footer-links">
-        <h4>Help</h4>
-        <a href="#">Size Guide</a>
-        <a href="#">Track Order</a>
-        <a href="#">Returns</a>
-        <a href="#">FAQ</a>
-        <a href="#">Contact Us</a>
-      </div>
-      <div class="footer-links">
-        <h4>Company</h4>
-        <a href="#">About Us</a>
-        <a href="#">Careers</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 LUXORA. All rights reserved.</p>
-      <div class="payment-icons">
-        <i class="fab fa-cc-visa"></i>
-        <i class="fab fa-cc-mastercard"></i>
-        <i class="fab fa-cc-paypal"></i>
-        <i class="fab fa-google-pay"></i>
-      </div>
-    </div>
-  </footer>
-
+    <?php include("include/footer.php"); ?>
+    
   <!-- BACK TO TOP -->
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
       class="fas fa-arrow-up"></i></button>
