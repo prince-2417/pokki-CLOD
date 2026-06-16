@@ -18,7 +18,63 @@
 
 <body>
 
-  <?php include("include/header.php"); ?>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    Free shipping on orders above ₹999 &nbsp;|&nbsp; Use code <strong>LUXORA10</strong> for 10% off
+  </div>
+  <header class="luxury-navbar">
+    <div class="nav-icons left-icons"><a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+    <ul class="nav-menu nav-menu-left">
+      <li><a href="new-aarawel.html">New</a></li>
+      <li class="has-dropdown"><a href="category.html">Bras <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown"><li><a href="category.html">✨ All Bras</a></li><li><a href="#">Padded Bras</a></li><li><a href="#">Non-Padded Bras</a></li><li><a href="#">Sports Bras</a></li><li><a href="#">Wireless Bras</a></li><li><a href="#">T-Shirt Bras</a></li></ul>
+      </li>
+      <li class="has-dropdown"><a href="category.html">Panties <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown"><li><a href="category.html">🌸 All Panties</a></li><li><a href="#">Bikini</a></li><li><a href="#">Hipster</a></li><li><a href="#">Thongs</a></li><li><a href="#">Boy Shorts</a></li><li><a href="#">High Waist</a></li></ul>
+      </li>
+    </ul>
+    <a href="index.html" class="logo">LUXORA</a>
+    <ul class="nav-menu nav-menu-right">
+      <li class="has-dropdown"><a href="category.html">Nightwear <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown"><li><a href="category.html">🌙 All Nightwear</a></li><li><a href="#">Night Suits</a></li><li><a href="#">Nighty &amp; Gowns</a></li><li><a href="#">Sleep Shorts</a></li><li><a href="#">Robes</a></li><li><a href="#">Camisoles</a></li></ul>
+      </li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+    <div class="nav-icons right-icons">
+      <a href="login.html" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <div class="mini-cart-wrap" id="miniWishWrap">
+        <button class="cart mini-cart-btn" id="miniWishBtn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><span id="navWishCount">0</span></button>
+        <div class="mini-cart-dropdown" id="miniWishDropdown">
+          <div class="mc-header"><span>Wishlist (<span id="mwCount">0</span>)</span><a href="wishlist.html" class="mc-view-all">View All</a></div>
+          <div class="mc-items" id="mwItems"></div>
+          <div class="mc-footer"><a href="wishlist.html" class="mc-checkout-btn">View Wishlist</a></div>
+        </div>
+      </div>
+      <div class="mini-cart-wrap" id="miniCartWrap">
+        <button class="cart mini-cart-btn" id="miniCartBtn" aria-label="Shopping Bag"><i class="fa-solid fa-bag-shopping"></i><span id="navCartCount">0</span></button>
+        <div class="mini-cart-dropdown" id="miniCartDropdown">
+          <div class="mc-header"><span>My Cart (<span id="mcCount">0</span>)</span><a href="cart.html" class="mc-view-all">View All</a></div>
+          <div class="mc-items" id="mcItems"></div>
+          <div class="mc-footer"><div class="mc-total"><span>Total</span><strong id="mcTotal">₹0</strong></div><a href="cart.html" class="mc-checkout-btn">Go to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileHamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </header>
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="mobile-menu-container" id="mobileMenuDrawer">
+    <button class="close-mobile-menu" id="closeMobileMenu"><i class="fas fa-times"></i></button>
+    <ul class="mobile-nav-menu" id="mobileNavList">
+      <li><a href="new-aarawel.html">New Arrivals</a></li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Bras</a><button class="mobile-dropdown-toggle" data-target="mob-bras"><i class="fas fa-chevron-down"></i></button></div><ul class="dropdown-mobile" id="mob-bras"><li><a href="category.html">✨ All Bras</a></li><li><a href="#">Padded Bras</a></li><li><a href="#">Non-Padded Bras</a></li><li><a href="#">Sports Bras</a></li><li><a href="#">Wireless Bras</a></li><li><a href="#">T-Shirt Bras</a></li></ul></li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Panties</a><button class="mobile-dropdown-toggle" data-target="mob-panties"><i class="fas fa-chevron-down"></i></button></div><ul class="dropdown-mobile" id="mob-panties"><li><a href="category.html">🌸 All Panties</a></li><li><a href="#">Bikini</a></li><li><a href="#">Hipster</a></li><li><a href="#">Thongs</a></li><li><a href="#">Boy Shorts</a></li><li><a href="#">High Waist</a></li></ul></li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Nightwear</a><button class="mobile-dropdown-toggle" data-target="mob-nightwear"><i class="fas fa-chevron-down"></i></button></div><ul class="dropdown-mobile" id="mob-nightwear"><li><a href="category.html">🌙 All Nightwear</a></li><li><a href="#">Night Suits</a></li><li><a href="#">Nighty &amp; Gowns</a></li><li><a href="#">Sleep Shorts</a></li><li><a href="#">Robes</a></li><li><a href="#">Camisoles</a></li></ul></li>
+      <li><a href="sale.html">Sale <span style="font-size:12px;background:#d56d90;color:#fff;padding:2px 8px;border-radius:20px;margin-left:10px;">-20%</span></a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+    <div class="mobile-footer-links"><a href="login.html"><i class="fa-regular fa-user"></i> My Account</a><a href="wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a><a href="#"><i class="fa-solid fa-tag"></i> Offers</a></div>
+  </div>
 
   <!-- PAGE BANNER -->
   <div class="page-banner">
@@ -27,7 +83,7 @@
       <h1>All <span>Products</span></h1>
     </div>
     <div class="breadcrumb">
-      <a href="index.php">Home</a><span>/</span>
+      <a href="index.html">Home</a><span>/</span>
       All Products
     </div>
   </div>
@@ -154,7 +210,7 @@
             <span class="badge">New</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -162,7 +218,7 @@
             <h4>Lace Push-Up Bra</h4>
             <p class="prod-desc">Delicate lace detailing with comfortable push-up padding for everyday elegance.</p>
             <div class="product-price"><span class="price">₹1,199</span><span class="old-price">₹1,699</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -172,7 +228,7 @@
             <span class="badge sale">Sale</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -180,7 +236,7 @@
             <h4>Satin Night Gown</h4>
             <p class="prod-desc">Silky satin fabric for a luxurious night's sleep. Available in 6 colors.</p>
             <div class="product-price"><span class="price">₹1,499</span><span class="old-price">₹2,299</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -189,7 +245,7 @@
             <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&q=80" alt="Boho Summer Dress" />
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -197,7 +253,7 @@
             <h4>Boho Summer Dress</h4>
             <p class="prod-desc">Flowy boho-inspired summer dress perfect for beach days and casual outings.</p>
             <div class="product-price"><span class="price">₹1,499</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -207,7 +263,7 @@
             <span class="badge">Hot</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -215,7 +271,7 @@
             <h4>Linen Co-ord Set</h4>
             <p class="prod-desc">Breathable linen co-ord set, effortlessly stylish for summer.</p>
             <div class="product-price"><span class="price">₹2,199</span><span class="old-price">₹2,999</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -224,7 +280,7 @@
             <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80" alt="Lace Bikini Panty" />
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -232,7 +288,7 @@
             <h4>Lace Bikini Panty</h4>
             <p class="prod-desc">Soft lace bikini panty with a comfortable fit for everyday wear.</p>
             <div class="product-price"><span class="price">₹599</span><span class="old-price">₹899</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -242,7 +298,7 @@
             <span class="badge sale">Sale</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -250,7 +306,7 @@
             <h4>Denim Jacket</h4>
             <p class="prod-desc">Classic denim jacket with a modern cut. A wardrobe staple.</p>
             <div class="product-price"><span class="price">₹2,299</span><span class="old-price">₹2,899</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -260,7 +316,7 @@
             <span class="badge">New</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -268,7 +324,7 @@
             <h4>Active Sports Bra</h4>
             <p class="prod-desc">High-support sports bra with moisture-wicking fabric for workouts.</p>
             <div class="product-price"><span class="price">₹999</span><span class="old-price">₹1,499</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -277,7 +333,7 @@
             <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?w=400&q=80" alt="Pearl Necklace Set" />
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -285,7 +341,7 @@
             <h4>Pearl Necklace Set</h4>
             <p class="prod-desc">Timeless pearl necklace set — perfect for gifting or everyday wear.</p>
             <div class="product-price"><span class="price">₹799</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -295,7 +351,7 @@
             <span class="badge">New</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -303,7 +359,7 @@
             <h4>Evening Slip Dress</h4>
             <p class="prod-desc">A sleek satin slip dress that transitions from day to evening effortlessly.</p>
             <div class="product-price"><span class="price">₹1,899</span><span class="old-price">₹2,499</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -312,7 +368,7 @@
             <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&q=80" alt="Cotton Hipster" />
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -320,7 +376,7 @@
             <h4>Cotton Hipster Panty</h4>
             <p class="prod-desc">Super soft 100% cotton hipster panty for all-day comfort.</p>
             <div class="product-price"><span class="price">₹499</span><span class="old-price">₹699</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -330,7 +386,7 @@
             <span class="badge sale">Sale</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -338,7 +394,7 @@
             <h4>Sporty Sneakers</h4>
             <p class="prod-desc">Lightweight sporty sneakers with cushioned sole for all-day comfort.</p>
             <div class="product-price"><span class="price">₹3,199</span><span class="old-price">₹4,499</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -348,7 +404,7 @@
             <span class="badge">Hot</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -356,7 +412,7 @@
             <h4>Seamless T-Shirt Bra</h4>
             <p class="prod-desc">Ultra-smooth seamless cups for an invisible look under fitted tops.</p>
             <div class="product-price"><span class="price">₹1,399</span><span class="old-price">₹1,899</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -366,7 +422,7 @@
             <span class="badge">New</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -374,7 +430,7 @@
             <h4>Silk Lounge Robe</h4>
             <p class="prod-desc">Luxurious silk robe with a sash tie, perfect for mornings and evenings.</p>
             <div class="product-price"><span class="price">₹2,199</span><span class="old-price">₹2,999</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -383,7 +439,7 @@
             <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=400&q=80" alt="High Waist Panty" />
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -391,7 +447,7 @@
             <h4>High Waist Shaper</h4>
             <p class="prod-desc">Tummy-control high waist panty with smooth, seamless finish.</p>
             <div class="product-price"><span class="price">₹699</span><span class="old-price">₹999</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -401,7 +457,7 @@
             <span class="badge sale">Sale</span>
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -409,7 +465,7 @@
             <h4>Floral Wrap Dress</h4>
             <p class="prod-desc">Feminine floral wrap dress perfect for brunches and casual days out.</p>
             <div class="product-price"><span class="price">₹1,299</span><span class="old-price">₹1,899</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -418,7 +474,7 @@
             <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80" alt="Wireless Comfort Bra" />
             <div class="product-actions">
               <button><i class="fas fa-heart"></i></button>
-              <button onclick="window.location='product-details.php'"><i class="fas fa-eye"></i></button>
+              <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
             </div>
           </div>
           <div class="product-info">
@@ -426,7 +482,7 @@
             <h4>Wireless Comfort Bra</h4>
             <p class="prod-desc">All-day comfort with soft cups and no underwire for a relaxed fit.</p>
             <div class="product-price"><span class="price">₹1,599</span><span class="old-price">₹2,199</span></div>
-            <button class="add-to-cart" onclick="window.location='product-details.php'">View Product</button>
+            <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
           </div>
         </div>
 
@@ -450,7 +506,19 @@
     </div>
   </div>
 
-  <?php include("include/footer.php"); ?>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>LUXORA</h3><p>Fashion Redefined. Wear what makes you feel unstoppable.</p>
+        <div class="social-links"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-pinterest"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-links"><h4>Shop</h4><a href="new-aarawel.html">New Arrivals</a><a href="products.html">Women</a><a href="#">Men</a><a href="#">Accessories</a><a href="sale.html">Sale</a></div>
+      <div class="footer-links"><h4>Help</h4><a href="#">Size Guide</a><a href="#">Track Order</a><a href="#">Returns</a><a href="#">FAQ</a><a href="#">Contact Us</a></div>
+      <div class="footer-links"><h4>Company</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 LUXORA. All rights reserved.</p>
+      <div class="payment-icons"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-google-pay"></i></div>
+    </div>
+  </footer>
 
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <i class="fas fa-arrow-up"></i>

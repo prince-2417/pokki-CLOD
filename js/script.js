@@ -180,25 +180,32 @@ function renderMiniWish() {
 }
 
 // Heart buttons on product cards
-document.querySelectorAll('.product-actions button:first-child').forEach(btn => {
-    const card = btn.closest('.product-card');
-    if (!card) return;
-    const name  = card.querySelector('h4') ? card.querySelector('h4').textContent : 'Product';
-    const img   = card.querySelector('img') ? card.querySelector('img').src : '';
-    const price = parseInt(card.dataset.price || card.querySelector('.price')?.textContent.replace(/[^0-9]/g,'') || 0);
-    const id    = name.toLowerCase().replace(/\s+/g,'-');
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.product-actions button:first-child').forEach(btn => {
+        const card = btn.closest('.product-card');
+        if (!card) return;
+        const name  = card.querySelector('h4') ? card.querySelector('h4').textContent.trim() : 'Product';
+        const img   = card.querySelector('img') ? card.querySelector('img').src : '';
+        const price = parseInt(card.dataset.price || (card.querySelector('.price') ? card.querySelector('.price').textContent.replace(/[^0-9]/g,'') : 0));
+        const id    = name.toLowerCase().replace(/\s+/g,'-');
 
-    btn.dataset.id = id;
-    btn.classList.add('wish-btn');
+        btn.dataset.id = id;
+        btn.classList.add('wish-btn');
 
-    // mark if already wishlisted
-    if (getWishlist().find(i => i.id === id)) btn.classList.add('wished');
+        // mark red if already wishlisted
+        if (getWishlist().find(i => i.id === id)) {
+            btn.classList.add('wished');
+            const icon = btn.querySelector('i');
+            if (icon) icon.style.color = '#e74c3c';
+        }
 
-    btn.addEventListener('click', function () {
-        const added = toggleWishlistItem(id, name, img, price);
-        this.classList.toggle('wished', added);
-        const icon = this.querySelector('i');
-        if (icon) icon.style.color = added ? '#e74c3c' : '';
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const added = toggleWishlistItem(id, name, img, price);
+            this.classList.toggle('wished', added);
+            const icon = this.querySelector('i');
+            if (icon) icon.style.color = added ? '#e74c3c' : '';
+        });
     });
 });
 
