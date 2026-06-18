@@ -1,0 +1,211 @@
+/* SIZE GUIDE PAGE STYLES */
+
+.size-guide-section {
+    padding: 80px 5%;
+    background: var(--white);
+}
+
+.size-guide-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Category Tabs and Tables */
+.charts-col h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: 24px;
+}
+
+.size-tabs {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.size-tab-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gray);
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.size-tab-btn.active {
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.size-tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.size-tab-btn.active::after {
+    width: 100%;
+}
+
+/* Size table styles */
+.size-table-container {
+    display: none;
+}
+
+.size-table-container.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.size-table th, 
+.size-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+    font-size: 0.95rem;
+}
+
+.size-table th {
+    background: #faf8f5;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.size-table tr:hover td {
+    background: #fdfcfb;
+}
+
+/* Measuring Guide tips */
+.measuring-guide-box {
+    background: #faf8f5;
+    padding: 35px;
+    border-radius: 4px;
+}
+
+.measuring-guide-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.measure-step {
+    margin-bottom: 25px;
+}
+
+.measure-step h4 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: var(--accent-dark);
+}
+
+.measure-step p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Bra Calculator Column */
+.calculator-col {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.04);
+    border: 1px solid var(--light-gray);
+    align-self: start;
+    position: sticky;
+    top: 50px;
+}
+
+.calculator-col h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.calculator-col p.calc-desc {
+    color: var(--gray);
+    font-size: 0.88rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Calculator result box */
+.calc-result-box {
+    margin-top: 30px;
+    border: 1px solid var(--accent);
+    background: #fdfcf9;
+    padding: 25px;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+.calc-result-box.active {
+    display: block;
+    animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.result-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin: 10px 0;
+}
+
+.result-advice {
+    color: var(--gray);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .size-guide-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .calculator-col {
+        position: relative;
+        top: 0;
+    }
+}

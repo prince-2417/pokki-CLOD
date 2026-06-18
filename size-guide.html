@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Size Guide — Bra &amp; Apparel Sizing — LUXORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/size-guide.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    Free shipping on orders above ₹999 &nbsp;|&nbsp; Use code <strong>LUXORA10</strong> for 10% off
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="luxury-navbar">
+    <div class="nav-icons left-icons"><a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+    <ul class="nav-menu nav-menu-left">
+      <li><a href="new-aarawel.html">New</a></li>
+      <li class="has-dropdown"><a href="category.html">Bras <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="category.html">✨ All Bras</a></li>
+          <li><a href="#">Padded Bras</a></li><li><a href="#">Non-Padded Bras</a></li>
+          <li><a href="#">Sports Bras</a></li><li><a href="#">Wireless Bras</a></li><li><a href="#">T-Shirt Bras</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown"><a href="category.html">Panties <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="category.html">🌸 All Panties</a></li>
+          <li><a href="#">Bikini</a></li><li><a href="#">Hipster</a></li>
+          <li><a href="#">Thongs</a></li><li><a href="#">Boy Shorts</a></li><li><a href="#">High Waist</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="index.html" class="logo">LUXORA</a>
+    <ul class="nav-menu nav-menu-right">
+      <li class="has-dropdown"><a href="category.html">Nightwear <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="category.html">🌙 All Nightwear</a></li>
+          <li><a href="#">Night Suits</a></li><li><a href="#">Nighty &amp; Gowns</a></li>
+          <li><a href="#">Sleep Shorts</a></li><li><a href="#">Robes</a></li><li><a href="#">Camisoles</a></li>
+        </ul>
+      </li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+    <div class="nav-icons right-icons">
+      <a href="login.html" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <div class="mini-cart-wrap" id="miniWishWrap">
+        <button class="cart mini-cart-btn" id="miniWishBtn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><span id="navWishCount">0</span></button>
+        <div class="mini-cart-dropdown" id="miniWishDropdown">
+          <div class="mc-header"><span>Wishlist (<span id="mwCount">0</span>)</span><a href="wishlist.html" class="mc-view-all">View All</a></div>
+          <div class="mc-items" id="mwItems"></div>
+          <div class="mc-footer"><a href="wishlist.html" class="mc-checkout-btn">View Wishlist</a></div>
+        </div>
+      </div>
+      <div class="mini-cart-wrap" id="miniCartWrap">
+        <button class="cart mini-cart-btn" id="miniCartBtn" aria-label="Shopping Bag"><i class="fa-solid fa-bag-shopping"></i><span id="navCartCount">0</span></button>
+        <div class="mini-cart-dropdown" id="miniCartDropdown">
+          <div class="mc-header"><span>My Cart (<span id="mcCount">0</span>)</span><a href="cart.html" class="mc-view-all">View All</a></div>
+          <div class="mc-items" id="mcItems"></div>
+          <div class="mc-footer"><div class="mc-total"><span>Total</span><strong id="mcTotal">₹0</strong></div><a href="cart.html" class="mc-checkout-btn">Go to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileHamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu-container" id="mobileMenuDrawer">
+    <button class="close-mobile-menu" id="closeMobileMenu"><i class="fas fa-times"></i></button>
+    <ul class="mobile-nav-menu" id="mobileNavList">
+      <li><a href="new-aarawel.html">New Arrivals</a></li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Bras</a><button class="mobile-dropdown-toggle" data-target="mob-bras"><i class="fas fa-chevron-down"></i></button></div>
+        <ul class="dropdown-mobile" id="mob-bras"><li><a href="category.html">✨ All Bras</a></li><li><a href="#">Padded Bras</a></li><li><a href="#">Non-Padded Bras</a></li><li><a href="#">Sports Bras</a></li><li><a href="#">Wireless Bras</a></li><li><a href="#">T-Shirt Bras</a></li></ul>
+      </li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Panties</a><button class="mobile-dropdown-toggle" data-target="mob-panties"><i class="fas fa-chevron-down"></i></button></div>
+        <ul class="dropdown-mobile" id="mob-panties"><li><a href="category.html">🌸 All Panties</a></li><li><a href="#">Bikini</a></li><li><a href="#">Hipster</a></li><li><a href="#">Thongs</a></li><li><a href="#">Boy Shorts</a></li><li><a href="#">High Waist</a></li></ul>
+      </li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Nightwear</a><button class="mobile-dropdown-toggle" data-target="mob-nightwear"><i class="fas fa-chevron-down"></i></button></div>
+        <ul class="dropdown-mobile" id="mob-nightwear"><li><a href="category.html">🌙 All Nightwear</a></li><li><a href="#">Night Suits</a></li><li><a href="#">Nighty &amp; Gowns</a></li><li><a href="#">Sleep Shorts</a></li><li><a href="#">Robes</a></li><li><a href="#">Camisoles</a></li></ul>
+      </li>
+      <li><a href="sale.html">Sale <span style="font-size:12px;background:#d56d90;color:#fff;padding:2px 8px;border-radius:20px;margin-left:10px;">-20%</span></a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+    <div class="mobile-footer-links">
+      <a href="login.html"><i class="fa-regular fa-user"></i> My Account</a>
+      <a href="wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+      <a href="#"><i class="fa-solid fa-tag"></i> Offers</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumb-bar">
+    <a href="index.html">Home</a><span>/</span> Size Guide
+  </div>
+
+  <!-- MAIN SECTION -->
+  <section class="size-guide-section">
+    <div class="size-guide-grid">
+      
+      <!-- LEFT COLUMN: Charts & How to Measure -->
+      <div class="charts-col reveal-left">
+        <h1>Find Your <span>Perfect Fit</span></h1>
+        
+        <!-- Tabs -->
+        <div class="size-tabs">
+          <button class="size-tab-btn active" data-tab="bras">Bras</button>
+          <button class="size-tab-btn" data-tab="panties">Panties</button>
+          <button class="size-tab-btn" data-tab="nightwear">Nightwear</button>
+        </div>
+
+        <!-- Tab 1: Bras -->
+        <div class="size-table-container active" id="bras-table-container">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Standard Band (IN)</th>
+                <th>Underbust (IN)</th>
+                <th>US / UK Band Size</th>
+                <th>EU Band Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>32</td>
+                <td>27" - 28"</td>
+                <td>32</td>
+                <td>70</td>
+              </tr>
+              <tr>
+                <td>34</td>
+                <td>29" - 30"</td>
+                <td>34</td>
+                <td>75</td>
+              </tr>
+              <tr>
+                <td>36</td>
+                <td>31" - 32"</td>
+                <td>36</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <td>38</td>
+                <td>33" - 34"</td>
+                <td>38</td>
+                <td>85</td>
+              </tr>
+              <tr>
+                <td>40</td>
+                <td>35" - 36"</td>
+                <td>40</td>
+                <td>90</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 2: Panties -->
+        <div class="size-table-container" id="panties-table-container">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>LUXORA Size</th>
+                <th>Waist (IN)</th>
+                <th>Hips (IN)</th>
+                <th>US Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S</td>
+                <td>25" - 27"</td>
+                <td>35" - 37"</td>
+                <td>4 - 6</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>28" - 30"</td>
+                <td>38" - 40"</td>
+                <td>8 - 10</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>31" - 33"</td>
+                <td>41" - 43"</td>
+                <td>12 - 14</td>
+              </tr>
+              <tr>
+                <td>XL</td>
+                <td>34" - 36"</td>
+                <td>44" - 46"</td>
+                <td>16 - 18</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab 3: Nightwear -->
+        <div class="size-table-container" id="nightwear-table-container">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>LUXORA Size</th>
+                <th>Bust (IN)</th>
+                <th>Waist (IN)</th>
+                <th>Hips (IN)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S</td>
+                <td>33" - 34"</td>
+                <td>25" - 26"</td>
+                <td>35" - 36"</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>35" - 36"</td>
+                <td>27" - 28"</td>
+                <td>37" - 38"</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>37" - 38"</td>
+                <td>29" - 30"</td>
+                <td>39" - 40"</td>
+              </tr>
+              <tr>
+                <td>XL</td>
+                <td>39" - 40"</td>
+                <td>31" - 32"</td>
+                <td>41" - 42"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- How to Measure Guide -->
+        <div class="measuring-guide-box">
+          <h3>How To Measure</h3>
+          
+          <div class="measure-step">
+            <h4>1. Underbust (Band)</h4>
+            <p>Wrap a soft measuring tape snugly around your ribcage, directly under your bust. Keep the tape parallel to the ground.</p>
+          </div>
+
+          <div class="measure-step">
+            <h4>2. Overbust (Bust)</h4>
+            <p>Measure across the fullest part of your bust, holding the tape loosely so it doesn't compress your skin.</p>
+          </div>
+
+          <div class="measure-step">
+            <h4>3. Waist &amp; Hips</h4>
+            <p>Measure your natural waistline (narrowest part above your navel) and hips (widest part around your glutes).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Bra Size Calculator -->
+      <div class="calculator-col reveal-right">
+        <h3>Bra Size Calculator</h3>
+        <p class="calc-desc">Enter your ribcage and bust measurements to estimate your recommended size.</p>
+        
+        <form id="braSizeCalcForm">
+          
+          <div class="form-group" style="position: relative; margin-bottom: 25px;">
+            <label for="underbustVal" style="display:block; margin-bottom:8px; font-size:0.9rem; font-weight:500;">1. Underbust (Ribcage) in inches</label>
+            <input type="number" step="0.1" id="underbustVal" placeholder="e.g. 30" style="width:100%; padding:14px; border:1px solid var(--light-gray); outline:none; background:#fbfbfb; border-radius:4px; font-family:inherit;" required />
+          </div>
+
+          <div class="form-group" style="position: relative; margin-bottom: 25px;">
+            <label for="overbustVal" style="display:block; margin-bottom:8px; font-size:0.9rem; font-weight:500;">2. Overbust (Fullest Bust) in inches</label>
+            <input type="number" step="0.1" id="overbustVal" placeholder="e.g. 34.5" style="width:100%; padding:14px; border:1px solid var(--light-gray); outline:none; background:#fbfbfb; border-radius:4px; font-family:inherit;" required />
+          </div>
+
+          <button type="submit" class="contact-submit-btn">Calculate My Size</button>
+
+        </form>
+
+        <!-- Result Box -->
+        <div class="calc-result-box" id="calcResultBox">
+          <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray);">Your Suggested Size</span>
+          <div class="result-val" id="calcResultText">34B</div>
+          <p class="result-advice" id="calcResultAdvice"></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>LUXORA</h3>
+        <p>Fashion Redefined. Wear what makes you feel unstoppable.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <a href="new-aarawel.html">New Arrivals</a>
+        <a href="products.html">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Accessories</a>
+        <a href="sale.html">Sale</a>
+      </div>
+      <div class="footer-links">
+        <h4>Help</h4>
+        <a href="size-guide.html">Size Guide</a>
+        <a href="track-order.html">Track Order</a>
+        <a href="returns.html">Returns</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="about-us.html">About Us</a>
+        <a href="#">Careers</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 LUXORA. All rights reserved.</p>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-google-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script src="js/size-guide.js"></script>
+
+</body>
+
+</html>

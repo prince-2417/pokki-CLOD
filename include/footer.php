@@ -21,18 +21,18 @@
           </div>
           <div class="footer-links">
               <h4>Help</h4>
-              <a href="#">Size Guide</a>
-              <a href="#">Track Order</a>
-              <a href="#">Returns</a>
-              <a href="#">FAQ</a>
-              <a href="#">Contact Us</a>
+              <a href="size-guide.html">Size Guide</a>
+              <a href="track-order.html">Track Order</a>
+              <a href="returns.html">Returns</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact Us</a>
           </div>
           <div class="footer-links">
               <h4>Company</h4>
-              <a href="#">About Us</a>
+              <a href="about-us.html">About Us</a>
               <a href="#">Careers</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="privacy-policy.html">Privacy Policy</a>
+              <a href="terms-of-service.html">Terms of Service</a>
           </div>
       </div>
       <div class="footer-bottom">

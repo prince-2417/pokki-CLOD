@@ -1,0 +1,214 @@
+/* RETURNS PAGE STYLES */
+
+.returns-section {
+    padding: 80px 5%;
+    background: var(--white);
+}
+
+.returns-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Policy cards styling */
+.returns-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.returns-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: 16px;
+}
+
+.returns-header p {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.returns-policy-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.policy-card {
+    background: #faf8f5;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.01);
+}
+
+.policy-card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 18px;
+}
+
+.policy-card h3 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.policy-card p {
+    color: var(--gray);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* Returns Form container */
+.returns-form-card {
+    background: var(--white);
+    padding: 45px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.04);
+    border-radius: 4px;
+    border: 1px solid var(--light-gray);
+}
+
+.returns-form-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Step wrapper styling */
+.returns-step {
+    display: none;
+}
+
+.returns-step.active {
+    display: block;
+}
+
+.returns-item-select-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.returns-item-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    background: #fbfbfb;
+}
+
+.returns-item-row input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.returns-item-row img {
+    width: 50px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.returns-item-details {
+    flex-grow: 1;
+}
+
+.returns-item-details h5 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.returns-item-details p {
+    color: var(--gray);
+    font-size: 0.85rem;
+}
+
+.returns-item-price {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Dropdown styling */
+.select-wrapper {
+    margin-bottom: 25px;
+}
+
+.select-wrapper label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.returns-form-card select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--light-gray);
+    background: #fbfbfb;
+    border-radius: 4px;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.returns-form-card select:focus {
+    border-color: var(--accent);
+    background: var(--white);
+}
+
+/* Success View styling */
+.returns-success-card {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.returns-success-card i {
+    font-size: 3.5rem;
+    color: #27ae60;
+    margin-bottom: 24px;
+}
+
+.returns-barcode-box {
+    border: 1px dashed var(--accent);
+    background: #fdfcf9;
+    padding: 30px;
+    margin: 30px 0;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.barcode-mock {
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    letter-spacing: 12px;
+    color: var(--black);
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.barcode-sub {
+    font-size: 0.8rem;
+    color: var(--gray);
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .returns-policy-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .returns-form-card {
+        padding: 30px 20px;
+    }
+}

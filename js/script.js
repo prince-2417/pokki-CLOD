@@ -377,5 +377,44 @@ document.addEventListener('keydown', function (e) {
         }
     });
 
+    // =============================================
+    // PREMIUM ANIMATIONS (SCROLL REVEAL & LOADER)
+    // =============================================
+    
+    // Page Loader Logic
+    const loader = document.createElement('div');
+    loader.className = 'lux-loader';
+    loader.innerHTML = `
+        <div class="lux-loader-logo">LUXORA</div>
+        <div class="lux-loader-bar"></div>
+    `;
+    document.body.insertBefore(loader, document.body.firstChild);
+
+    window.addEventListener('load', function () {
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+        }, 300); // Small delay for premium feel
+    });
+
+    // Scroll Reveal Observer
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe elements with reveal classes
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
+    revealElements.forEach(el => revealObserver.observe(el));
+
     console.log('LUXORA scripts loaded — all pages ready ✓');
 })();

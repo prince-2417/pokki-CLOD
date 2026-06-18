@@ -267,6 +267,23 @@ body {
 .product-card {
   background: var(--white);
   transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+
+/* Elegant gold line slide at bottom of card */
+.product-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--accent);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 10;
+}
+.product-card:hover::after {
+  width: 100%;
 }
 
 .product-card:hover {
@@ -316,11 +333,13 @@ body {
   flex-direction: column;
   gap: 8px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transform: translateX(15px);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .product-card:hover .product-actions {
   opacity: 1;
+  transform: translateX(0);
 }
 
 .product-actions button {
@@ -335,12 +354,13 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .product-actions button:hover {
   background: var(--accent);
   color: white;
+  transform: scale(1.1);
 }
 
 .product-info {
@@ -1055,3 +1075,131 @@ body {
 }
 
 .dropdown li a::after { display: none; }
+
+/* PREMIUM ANIMATIONS & HOVER EFFECTS */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal-zoom.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered delay classes */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Luxury Preloader Loader Overlay */
+.lux-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.6s;
+}
+.lux-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.lux-loader-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: loaderLogoFade 1s ease forwards 0.2s;
+}
+.lux-loader-bar {
+  width: 120px;
+  height: 2px;
+  background: var(--light-gray);
+  position: relative;
+  overflow: hidden;
+}
+.lux-loader-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  animation: loaderProgress 1.2s ease-in-out infinite;
+}
+
+@keyframes loaderLogoFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loaderProgress {
+  0% { left: -100%; }
+  50% { left: 0; }
+  100% { left: 100%; }
+}
+
+/* BREADCRUMB */
+.breadcrumb-bar {
+    padding: 16px 5%;
+    border-bottom: 1px solid #eee;
+    font-size: 0.78rem;
+    color: var(--gray);
+    letter-spacing: 0.04em;
+}
+
+.breadcrumb-bar a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-bar a:hover { color: var(--accent); }
+.breadcrumb-bar span { margin: 0 8px; }
+
+

@@ -1,0 +1,139 @@
+/* TERMS OF SERVICE PAGE STYLES */
+
+.policy-section {
+    padding: 80px 5%;
+    background: var(--white);
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 2.2fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sidebar styling */
+.policy-sidebar {
+    position: sticky;
+    top: 50px;
+    align-self: start;
+    height: auto;
+    border-right: 1px solid var(--light-gray);
+    padding-right: 30px;
+}
+
+.policy-sidebar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: var(--black);
+}
+
+.policy-toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.policy-toc-link {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    line-height: 1.4;
+    display: block;
+}
+
+.policy-toc-link:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+.policy-toc-link.active {
+    color: var(--accent-dark);
+    font-weight: 600;
+    padding-left: 8px;
+    border-left: 2px solid var(--accent);
+}
+
+/* Document content styling */
+.policy-content {
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+.policy-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.policy-last-updated {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 40px;
+}
+
+.policy-content-section {
+    margin-bottom: 45px;
+}
+
+.policy-content-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 20px;
+    scroll-margin-top: 50px;
+}
+
+.policy-content-section p {
+    margin-bottom: 18px;
+    font-size: 0.98rem;
+}
+
+.policy-content-section ul {
+    margin-bottom: 18px;
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.policy-content-section li {
+    margin-bottom: 8px;
+    font-size: 0.98rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .policy-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .policy-sidebar {
+        position: relative;
+        top: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--light-gray);
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    
+    .policy-toc {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+    .policy-toc-link.active {
+        padding-left: 0;
+        border-left: none;
+        color: var(--accent);
+        border-bottom: 1px solid var(--accent);
+    }
+}

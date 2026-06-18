@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — LUXORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/terms-of-service.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    Free shipping on orders above ₹999 &nbsp;|&nbsp; Use code <strong>LUXORA10</strong> for 10% off
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="luxury-navbar">
+    <div class="nav-icons left-icons"><a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+    <ul class="nav-menu nav-menu-left">
+      <li><a href="new-aarawel.html">New</a></li>
+      <li class="has-dropdown"><a href="category.html">Bras <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="category.html">✨ All Bras</a></li>
+          <li><a href="#">Padded Bras</a></li><li><a href="#">Non-Padded Bras</a></li>
+          <li><a href="#">Sports Bras</a></li><li><a href="#">Wireless Bras</a></li><li><a href="#">T-Shirt Bras</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown"><a href="category.html">Panties <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="category.html">🌸 All Panties</a></li>
+          <li><a href="#">Bikini</a></li><li><a href="#">Hipster</a></li>
+          <li><a href="#">Thongs</a></li><li><a href="#">Boy Shorts</a></li><li><a href="#">High Waist</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="index.html" class="logo">LUXORA</a>
+    <ul class="nav-menu nav-menu-right">
+      <li class="has-dropdown"><a href="category.html">Nightwear <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="category.html">🌙 All Nightwear</a></li>
+          <li><a href="#">Night Suits</a></li><li><a href="#">Nighty &amp; Gowns</a></li>
+          <li><a href="#">Sleep Shorts</a></li><li><a href="#">Robes</a></li><li><a href="#">Camisoles</a></li>
+        </ul>
+      </li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+    <div class="nav-icons right-icons">
+      <a href="login.html" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <div class="mini-cart-wrap" id="miniWishWrap">
+        <button class="cart mini-cart-btn" id="miniWishBtn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><span id="navWishCount">0</span></button>
+        <div class="mini-cart-dropdown" id="miniWishDropdown">
+          <div class="mc-header"><span>Wishlist (<span id="mwCount">0</span>)</span><a href="wishlist.html" class="mc-view-all">View All</a></div>
+          <div class="mc-items" id="mwItems"></div>
+          <div class="mc-footer"><a href="wishlist.html" class="mc-checkout-btn">View Wishlist</a></div>
+        </div>
+      </div>
+      <div class="mini-cart-wrap" id="miniCartWrap">
+        <button class="cart mini-cart-btn" id="miniCartBtn" aria-label="Shopping Bag"><i class="fa-solid fa-bag-shopping"></i><span id="navCartCount">0</span></button>
+        <div class="mini-cart-dropdown" id="miniCartDropdown">
+          <div class="mc-header"><span>My Cart (<span id="mcCount">0</span>)</span><a href="cart.html" class="mc-view-all">View All</a></div>
+          <div class="mc-items" id="mcItems"></div>
+          <div class="mc-footer"><div class="mc-total"><span>Total</span><strong id="mcTotal">₹0</strong></div><a href="cart.html" class="mc-checkout-btn">Go to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileHamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu-container" id="mobileMenuDrawer">
+    <button class="close-mobile-menu" id="closeMobileMenu"><i class="fas fa-times"></i></button>
+    <ul class="mobile-nav-menu" id="mobileNavList">
+      <li><a href="new-aarawel.html">New Arrivals</a></li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Bras</a><button class="mobile-dropdown-toggle" data-target="mob-bras"><i class="fas fa-chevron-down"></i></button></div>
+        <ul class="dropdown-mobile" id="mob-bras"><li><a href="category.html">✨ All Bras</a></li><li><a href="#">Padded Bras</a></li><li><a href="#">Non-Padded Bras</a></li><li><a href="#">Sports Bras</a></li><li><a href="#">Wireless Bras</a></li><li><a href="#">T-Shirt Bras</a></li></ul>
+      </li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Panties</a><button class="mobile-dropdown-toggle" data-target="mob-panties"><i class="fas fa-chevron-down"></i></button></div>
+        <ul class="dropdown-mobile" id="mob-panties"><li><a href="category.html">🌸 All Panties</a></li><li><a href="#">Bikini</a></li><li><a href="#">Hipster</a></li><li><a href="#">Thongs</a></li><li><a href="#">Boy Shorts</a></li><li><a href="#">High Waist</a></li></ul>
+      </li>
+      <li class="mobile-has-dropdown"><div class="mobile-menu-link-wrapper"><a href="category.html" class="mobile-parent-link">Nightwear</a><button class="mobile-dropdown-toggle" data-target="mob-nightwear"><i class="fas fa-chevron-down"></i></button></div>
+        <ul class="dropdown-mobile" id="mob-nightwear"><li><a href="category.html">🌙 All Nightwear</a></li><li><a href="#">Night Suits</a></li><li><a href="#">Nighty &amp; Gowns</a></li><li><a href="#">Sleep Shorts</a></li><li><a href="#">Robes</a></li><li><a href="#">Camisoles</a></li></ul>
+      </li>
+      <li><a href="sale.html">Sale <span style="font-size:12px;background:#d56d90;color:#fff;padding:2px 8px;border-radius:20px;margin-left:10px;">-20%</span></a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+    <div class="mobile-footer-links">
+      <a href="login.html"><i class="fa-regular fa-user"></i> My Account</a>
+      <a href="wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+      <a href="#"><i class="fa-solid fa-tag"></i> Offers</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumb-bar">
+    <a href="index.html">Home</a><span>/</span> Terms of Service
+  </div>
+
+  <!-- CONTENT SECTION -->
+  <section class="policy-section">
+    <div class="policy-grid">
+      
+      <!-- SIDEBAR TOC -->
+      <aside class="policy-sidebar reveal-left">
+        <h3>Table of Contents</h3>
+        <ul class="policy-toc">
+          <li><a href="#acceptance" class="policy-toc-link active">1. Acceptance of Terms</a></li>
+          <li><a href="#eligibility" class="policy-toc-link">2. Eligibility &amp; Accounts</a></li>
+          <li><a href="#purchases" class="policy-toc-link">3. Purchases &amp; Payments</a></li>
+          <li><a href="#intellectual-prop" class="policy-toc-link">4. Intellectual Property</a></li>
+          <li><a href="#prohibited-uses" class="policy-toc-link">5. Prohibited Uses</a></li>
+          <li><a href="#liability" class="policy-toc-link">6. Limit of Liability</a></li>
+          <li><a href="#governing-law" class="policy-toc-link">7. Governing Law</a></li>
+        </ul>
+      </aside>
+
+      <!-- DOCUMENT CONTENT -->
+      <div class="policy-content reveal-right">
+        <h1>Terms of Service</h1>
+        <p class="policy-last-updated">Last Updated: June 18, 2026</p>
+
+        <div class="policy-content-section" id="acceptance">
+          <h2>1. Acceptance of Terms</h2>
+          <p>By accessing and using the website of LUXORA ("Site", "we", "us", or "our"), you agree to be bound by these Terms of Service. If you do not agree to all of these terms, please do not use the Site.</p>
+          <p>We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Site following any changes constitutes your agreement to follow and be bound by the Terms as modified.</p>
+        </div>
+
+        <div class="policy-content-section" id="eligibility">
+          <h2>2. Eligibility &amp; Accounts</h2>
+          <p>By using this Site, you represent that you are at least the age of majority in your state or province of residence. To access certain features of the Site, you may be required to register an account.</p>
+          <p>You agree to provide accurate, current, and complete information during registration, and to maintain the security of your password and accept all risks of unauthorized access to your account.</p>
+        </div>
+
+        <div class="policy-content-section" id="purchases">
+          <h2>3. Purchases &amp; Payments</h2>
+          <p>All prices displayed on the Site are in Indian Rupees (INR) and are inclusive of GST unless specified otherwise. We reserve the right to refuse or cancel any order for any reason, including errors in product pricing or availability.</p>
+          <p>By submitting a payment, you warrant that you are authorized to use the designated payment method and authorize us to charge your order amount (including shipping and taxes, if applicable) to that payment method.</p>
+        </div>
+
+        <div class="policy-content-section" id="intellectual-prop">
+          <h2>4. Intellectual Property</h2>
+          <p>All content on this Site, including text, graphics, logos, images, code, and stylesheets, is the property of LUXORA and is protected by copyright, trademark, and other intellectual property laws. You are granted a limited license to access and print pages for personal, non-commercial use only.</p>
+        </div>
+
+        <div class="policy-content-section" id="prohibited-uses">
+          <h2>5. Prohibited Uses</h2>
+          <p>You agree not to use the Site to:</p>
+          <ul>
+            <li>Engage in any unlawful activities or solicit others to perform unlawful acts.</li>
+            <li>Infringe upon or violate our intellectual property rights or the rights of others.</li>
+            <li>Transmit viruses, malware, or any other type of malicious code that could affect website functionality.</li>
+            <li>Collect or track the personal information of other users of the Site.</li>
+          </ul>
+        </div>
+
+        <div class="policy-content-section" id="liability">
+          <h2>6. Limit of Liability</h2>
+          <p>In no event shall LUXORA, its directors, employees, or partners, be liable for any direct, indirect, incidental, punitive, or consequential damages arising from your use of the Site, products purchased, or styling advice provided.</p>
+        </div>
+
+        <div class="policy-content-section" id="governing-law">
+          <h2>7. Governing Law</h2>
+          <p>These Terms of Service and any separate agreements shall be governed by and construed in accordance with the laws of India, with exclusive jurisdiction in the courts of New Delhi, India.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>LUXORA</h3>
+        <p>Fashion Redefined. Wear what makes you feel unstoppable.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <a href="new-aarawel.html">New Arrivals</a>
+        <a href="products.html">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Accessories</a>
+        <a href="sale.html">Sale</a>
+      </div>
+      <div class="footer-links">
+        <h4>Help</h4>
+        <a href="size-guide.html">Size Guide</a>
+        <a href="track-order.html">Track Order</a>
+        <a href="returns.html">Returns</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="about-us.html">About Us</a>
+        <a href="#">Careers</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 LUXORA. All rights reserved.</p>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-google-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script src="js/terms-of-service.js"></script>
+
+</body>
+
+</html>
