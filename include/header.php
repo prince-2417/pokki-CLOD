@@ -1,6 +1,6 @@
 <!-- TOP BAR -->
 <div class="topbar">
-    Free shipping on orders above ₹999 &nbsp;|&nbsp; Use code <strong>LUXORA10</strong> for 10% off
+    Free shipping on orders above ₹999 &nbsp;|&nbsp; Use code <strong>LACEHARBOR10</strong> for 10% off
 </div>
 
 <!-- NAVBAR (LUXURY) -->
@@ -39,7 +39,7 @@
     </ul>
 
     <!-- Logo -->
-    <a href="#" class="logo">LUXORA</a>
+    <a href="#" class="logo">LACEHARBOR</a>
 
     <!-- Desktop Menus (RIGHT side of logo) -->
     <ul class="nav-menu nav-menu-right">

@@ -2,7 +2,7 @@
   <footer class="footer">
       <div class="footer-grid">
           <div class="footer-brand">
-              <h3>LUXORA</h3>
+              <h3>LACEHARBOR</h3>
               <p>Fashion Redefined. Wear what makes you feel unstoppable.</p>
               <div class="social-links">
                   <a href="#"><i class="fab fa-instagram"></i></a>
@@ -36,7 +36,7 @@
           </div>
       </div>
       <div class="footer-bottom">
-          <p>© 2025 LUXORA. All rights reserved.</p>
+          <p>© 2025 LACEHARBOR. All rights reserved.</p>
           <div class="payment-icons">
               <i class="fab fa-cc-visa"></i>
               <i class="fab fa-cc-mastercard"></i>

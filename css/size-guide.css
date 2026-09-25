@@ -20,6 +20,40 @@
     margin-bottom: 24px;
 }
 
+.size-chart-images {
+    display: grid;
+    gap: 28px;
+    margin-bottom: 42px;
+}
+
+.size-chart-image-card {
+    padding: 24px;
+    background: #faf8f5;
+    border: 1px solid var(--light-gray);
+    text-align: center;
+}
+
+.size-chart-image-card h2 {
+    margin-bottom: 18px;
+    color: var(--black);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+.size-chart-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.charts-col > .size-tabs,
+.charts-col > .size-table-container {
+    display: none;
+}
+
 .size-tabs {
     display: flex;
     gap: 30px;

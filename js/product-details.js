@@ -1,16 +1,61 @@
+// On page load — check if product is already wishlisted
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('wishBtn');
+    if (!btn) return;
+    const name = document.querySelector('.pd-title').textContent.trim();
+    const id   = name.toLowerCase().replace(/\s+/g, '-');
+    if (getWishlist().find(i => i.id === id)) {
+        btn.classList.add('active');
+        btn.innerHTML = '<i class="fas fa-heart" style="color:#e74c3c"></i>';
+    }
+});
+
 // Image gallery
 function changeImg(thumb, src) {
-    document.getElementById('mainImg').src = src;
+    const mainImg = document.getElementById('mainImg');
+    const imageWrap = mainImg.closest('.main-img-wrap');
+
+    mainImg.src = src;
+    mainImg.style.transform = 'scale(1)';
+    mainImg.style.transformOrigin = 'center center';
+    imageWrap.classList.remove('is-zoomed');
     document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
+}
+
+const mainImageWrap = document.querySelector('.main-img-wrap');
+const mainImage = document.getElementById('mainImg');
+
+if (mainImageWrap && mainImage) {
+    mainImageWrap.addEventListener('mousemove', (event) => {
+        const bounds = mainImageWrap.getBoundingClientRect();
+        const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+        const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+        mainImage.style.transformOrigin = `${x}% ${y}%`;
+        mainImage.style.transform = 'scale(2.2)';
+        mainImageWrap.classList.add('is-zoomed');
+    });
+
+    mainImageWrap.addEventListener('mouseleave', () => {
+        mainImage.style.transform = 'scale(1)';
+        mainImage.style.transformOrigin = 'center center';
+        mainImageWrap.classList.remove('is-zoomed');
+    });
 }
 
 // Wishlist toggle
 function toggleWish() {
     const btn = document.getElementById('wishBtn');
-    btn.classList.toggle('active');
-    btn.innerHTML = btn.classList.contains('active')
-        ? '<i class="fas fa-heart"></i>'
+    const name  = document.querySelector('.pd-title').textContent.trim();
+    const img   = document.getElementById('mainImg').src;
+    const price = parseInt(document.querySelector('.pd-price .price').textContent.replace(/[^0-9]/g, ''));
+    const id    = name.toLowerCase().replace(/\s+/g, '-');
+
+    const added = toggleWishlistItem(id, name, img, price);
+    btn.classList.toggle('active', added);
+    btn.innerHTML = added
+        ? '<i class="fas fa-heart" style="color:#e74c3c"></i>'
         : '<i class="far fa-heart"></i>';
 }
 

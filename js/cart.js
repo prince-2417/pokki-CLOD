@@ -1,4 +1,4 @@
-const COUPON_CODES = { 'LUXORA10': 10, 'SAVE20': 20 };
+const COUPON_CODES = { 'LACEHARBOR10': 10, 'SAVE20': 20 };
 let appliedDiscount = 0;
 
 // ── LOAD CART FROM localStorage ──
@@ -21,7 +21,7 @@ function loadCart() {
         div.innerHTML = `
             <img src="${item.img}" alt="${item.name}" />
             <div class="cart-item-info">
-                <p class="cart-brand">LUXORA</p>
+                <p class="cart-brand">LACEHARBOR</p>
                 <h4>${item.name}</h4>
                 <p class="cart-meta">Color: ${item.color} &nbsp;|&nbsp; Size: ${item.size}</p>
                 <div class="cart-item-bottom">
@@ -124,7 +124,7 @@ function applyCoupon() {
         msg.className = 'coupon-msg success';
     } else {
         appliedDiscount = 0;
-        msg.textContent = '✗ Invalid coupon code. Try LUXORA10 or SAVE20.';
+        msg.textContent = '✗ Invalid coupon code. Try LACEHARBOR10 or SAVE20.';
         msg.className = 'coupon-msg error';
     }
     updateTotal();

@@ -66,6 +66,7 @@
     flex: 1;
     overflow: hidden;
     background: var(--cream);
+    cursor: zoom-in;
 }
 
 .main-img-wrap img {
@@ -73,11 +74,13 @@
     height: 580px;
     object-fit: cover;
     display: block;
-    transition: transform 0.4s;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform 0.18s ease-out;
 }
 
-.main-img-wrap:hover img {
-    transform: scale(1.04);
+.main-img-wrap.is-zoomed {
+    cursor: zoom-out;
 }
 
 .img-badge {

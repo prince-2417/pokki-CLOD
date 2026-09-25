@@ -28,18 +28,22 @@
 
  /* Logo */
  .logo {
-     font-size: 38px;
-     font-family: 'Playfair Display', serif;
-     font-weight: 700;
-     letter-spacing: 8px;
      text-decoration: none;
-     color: #111;
      z-index: 100;
      transition: opacity 0.2s;
+     display: flex;
+     align-items: center;
  }
 
  .logo:hover {
-     opacity: 0.8;
+     opacity: 0.85;
+ }
+
+ .logo-img {
+     height: 70px;
+     width: auto;
+     object-fit: contain;
+     display: block;
  }
 
  /* DESKTOP NAV MENUS (two separate lists) */
@@ -327,9 +331,8 @@
          gap: 22px;
      }
 
-     .logo {
-         font-size: 32px;
-         letter-spacing: 5px;
+     .logo-img {
+         height: 60px;
      }
  }
 
@@ -350,10 +353,12 @@
      /* logo order */
      .logo {
          order: 1;
-         font-size: 28px;
-         letter-spacing: 4px;
          margin: 0 auto;
          position: static;
+     }
+
+     .logo-img {
+         height: 55px;
      }
 
      .left-icons {
@@ -384,6 +389,10 @@
      .logo {
          font-size: 22px;
          letter-spacing: 3px;
+     }
+
+     .logo-img {
+         height: 45px;
      }
 
      .nav-icons {
@@ -587,7 +596,7 @@
     width: 100%;
     padding: 12px;
     background: #0a0a0a;
-    color: #fff;
+    color: #ffffff !important;
     text-align: center;
     text-decoration: none;
     font-size: 0.8rem;
@@ -596,6 +605,8 @@
     text-transform: uppercase;
     transition: background 0.2s;
     font-family: 'Inter', sans-serif;
+    border: none;
+    cursor: pointer;
 }
 
-.mc-checkout-btn:hover { background: #c9a96e; }
+.mc-checkout-btn:hover { background: #c9a96e; color: #ffffff !important; }

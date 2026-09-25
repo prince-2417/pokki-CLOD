@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             status = 'Processing';
             progress = 33;
-            carrier = 'LUXORA Atelier Courier';
+            carrier = 'LACEHARBOR Atelier Courier';
             // Delivered in 3 days
             const procDate = new Date(today);
             procDate.setDate(today.getDate() + 3);

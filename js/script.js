@@ -17,7 +17,7 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
 // =============================================
 // CART DATA (localStorage based)
 // =============================================
-const CART_KEY = 'luxora_cart';
+const CART_KEY = 'LACEHARBOR_cart';
 
 function getCart() {
     return JSON.parse(localStorage.getItem(CART_KEY) || '[]');
@@ -121,7 +121,7 @@ window.addEventListener('scroll', () => {
 // =============================================
 // 3. WISHLIST TOGGLE
 // =============================================
-const WISH_KEY = 'luxora_wishlist';
+const WISH_KEY = 'LACEHARBOR_wishlist';
 
 function getWishlist() {
     return JSON.parse(localStorage.getItem(WISH_KEY) || '[]');
@@ -385,7 +385,7 @@ document.addEventListener('keydown', function (e) {
     const loader = document.createElement('div');
     loader.className = 'lux-loader';
     loader.innerHTML = `
-        <div class="lux-loader-logo">LUXORA</div>
+       
         <div class="lux-loader-bar"></div>
     `;
     document.body.insertBefore(loader, document.body.firstChild);
@@ -405,7 +405,7 @@ document.addEventListener('keydown', function (e) {
             }
         });
     };
-
+    
     const revealObserver = new IntersectionObserver(revealCallback, {
         root: null,
         threshold: 0.1,
@@ -416,5 +416,96 @@ document.addEventListener('keydown', function (e) {
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
     revealElements.forEach(el => revealObserver.observe(el));
 
-    console.log('LUXORA scripts loaded — all pages ready ✓');
+    console.log('LACEHARBOR scripts loaded — all pages ready ✓');
 })();
+
+// =============================================
+// HERO CAROUSEL SLIDER LOGIC
+// =============================================
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.hero-slide');
+    const prevBtn = document.getElementById('heroPrev');
+    const nextBtn = document.getElementById('heroNext');
+    const dotsContainer = document.getElementById('heroCarouselDots');
+    const heroCarousel = document.querySelector('.hero-carousel');
+
+    if (!slides.length) return;
+
+    let currentSlide = 0;
+    let slideTimer = null;
+
+    // Create and initialize dots
+    slides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = 'hero-dot' + (idx === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+        dot.addEventListener('click', () => {
+            goToSlide(idx);
+            startAutoSlide();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.hero-dot');
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    function startAutoSlide() {
+        stopAutoSlide();
+        slideTimer = setInterval(nextSlide, 6000);
+    }
+
+    function stopAutoSlide() {
+        if (slideTimer) clearInterval(slideTimer);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', function () {
+        nextSlide();
+        startAutoSlide();
+    });
+
+    if (prevBtn) prevBtn.addEventListener('click', function () {
+        prevSlide();
+        startAutoSlide();
+    });
+
+    if (heroCarousel) {
+        heroCarousel.addEventListener('mouseenter', stopAutoSlide);
+        heroCarousel.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    startAutoSlide();
+});
+
+// =============================================
+// FAQ ACCORDION LOGIC
+// =============================================
+document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        if (btn) {
+            btn.addEventListener('click', function () {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        }
+    });
+});
